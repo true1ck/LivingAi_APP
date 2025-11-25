@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:livingai_app/ui/login/signup_screen.dart';
+import 'package:livingai_app/ui/login/signin_screen.dart';
+
 
 // Colors from Figma
 const LightCream = Color(0xFFFFFBEB);
@@ -153,7 +155,10 @@ class LoginScreen extends StatelessWidget {
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
-                        // TODO: Handle Sign in
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const SignInScreen()),
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: TerraCotta,
